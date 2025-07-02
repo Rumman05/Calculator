@@ -291,7 +291,7 @@ const header = document.createElement("div");
 header.className = "header";
 
 const title = document.createElement("h1");
-title.textContent = "Advanced Calculator";
+title.textContent = "Welcome to my Calculator!";
 title.className = "calculator-title";
 
 header.appendChild(title);

@@ -47,19 +47,19 @@ body {
 }
 
 .github-link {
-    color: #fb923c;
+    color: #24292e;
     text-decoration: none;
     font-weight: 500;
     padding: 8px 16px;
-    border: 2px solid #fb923c;
+    border: 2px solid #24292e;
     border-radius: 6px;
     transition: all 0.2s ease-in-out;
     font-size: 0.9rem;
 }
 
 .github-link:hover {
-    background-color: #fb923c;
-    color: white;
+    background-color: #2b3137;
+    color: #fafbfc;
     transform: translateY(-1px);
     box-shadow: 0 4px 8px rgba(251, 146, 60, 0.3);
 }
@@ -164,20 +164,6 @@ body.dark-mode .operator-panel button:active {
     background-color: #b45309;
 }
 
-body.dark-mode .equals-btn {
-    background-color: #f59e0b;
-    color: white;
-    border-color: #f59e0b;
-}
-
-body.dark-mode .equals-btn:hover {
-    background-color: #d97706;
-}
-
-body.dark-mode .equals-btn:active {
-    background-color: #b45309;
-}
-
 body.dark-mode .backspace-btn {
     background-color: #dc2626 !important;
     color: white !important;
@@ -193,12 +179,12 @@ body.dark-mode .copyright {
 }
 
 body.dark-mode .github-link {
-    color: #fbbf24;
-    border-color: #fbbf24;
+    color: #fafbfc;
+    border-color: #ffffff;
 }
 
 body.dark-mode .github-link:hover {
-    background-color: #fbbf24;
+    background-color: #fafbfc;
     color: #111827;
 }
 
@@ -349,16 +335,16 @@ button:active {
 
 /* Special styling for the equals button */
 .equals-btn {
-    background-color: #fb923c;
+    background-color: rgb(176, 176, 231);
     color: white;
 }
 
 .equals-btn:hover {
-    background-color: #f97316;
+    background-color: rgb(147, 147, 231);
 }
 
 .equals-btn:active {
-    background-color: #ea580c;
+    background-color: rgb(110, 110, 224);
 }
 
 /* Special styling for the backspace button */
