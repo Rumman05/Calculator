@@ -1,0 +1,395 @@
+/* General body styling - now with vertical layout for header, calculator, footer */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calculator-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #fb923c, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Footer styling */
+.footer {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.copyright {
+    margin: 0;
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.github-link {
+    color: #fb923c;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: 2px solid #fb923c;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.github-link:hover {
+    background-color: #fb923c;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(251, 146, 60, 0.3);
+}
+
+/* Dark mode toggle button - positioned in bottom right */
+.dark-mode-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #374151;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-btn:hover {
+    background-color: #4b5563;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-btn:active {
+    transform: scale(0.95);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+body.dark-mode .calculator-title {
+    color: #f9fafb;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+body.dark-mode .calculator {
+    background-color: #1f2937;
+    border-color: #374151;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .display {
+    background-color: #374151;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+}
+
+body.dark-mode button {
+    background-color: #374151;
+    color: #f9fafb;
+    border: 1px solid #4b5563;
+}
+
+body.dark-mode button:hover {
+    background-color: #4b5563;
+}
+
+body.dark-mode button:active {
+    background-color: #6b7280;
+}
+
+body.dark-mode .clear-btn {
+    background-color: #dc2626;
+    color: white;
+}
+
+body.dark-mode .clear-btn:hover {
+    background-color: #b91c1c;
+}
+
+body.dark-mode .decimal-btn:disabled {
+    background-color: #1f2937;
+    color: #6b7280;
+    border-color: #374151;
+}
+
+body.dark-mode .operator-panel button {
+    background-color: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
+}
+
+body.dark-mode .operator-panel button:hover {
+    background-color: #d97706;
+}
+
+body.dark-mode .operator-panel button:active {
+    background-color: #b45309;
+}
+
+body.dark-mode .equals-btn {
+    background-color: #f59e0b;
+    color: white;
+    border-color: #f59e0b;
+}
+
+body.dark-mode .equals-btn:hover {
+    background-color: #d97706;
+}
+
+body.dark-mode .equals-btn:active {
+    background-color: #b45309;
+}
+
+body.dark-mode .backspace-btn {
+    background-color: #dc2626 !important;
+    color: white !important;
+    border-color: #dc2626 !important;
+}
+
+body.dark-mode .backspace-btn:hover {
+    background-color: #b91c1c !important;
+}
+
+body.dark-mode .copyright {
+    color: #9ca3af;
+}
+
+body.dark-mode .github-link {
+    color: #fbbf24;
+    border-color: #fbbf24;
+}
+
+body.dark-mode .github-link:hover {
+    background-color: #fbbf24;
+    color: #111827;
+}
+
+body.dark-mode .dark-mode-btn {
+    background-color: #fbbf24;
+    color: #111827;
+}
+
+body.dark-mode .dark-mode-btn:hover {
+    background-color: #f59e0b;
+}
+
+/* The main container for the entire calculator */
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    width: 380px; /* Slightly wider to accommodate extra buttons */
+}
+
+/* The display screen for the calculator input and results */
+.display {
+    width: 100%;
+    padding: 15px;
+    font-size: 2.5rem;
+    text-align: right;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #1f2937;
+}
+
+/* A flex container for the number grid and the operator panel */
+.main-content {
+    display: flex;
+    gap: 15px;
+}
+
+/* Container for all number buttons (1-9 grid and bottom row) */
+.numbers-container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Grid container for the number buttons (1-9) */
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* Grid container for the bottom row (now with 4 buttons: C, 0, ., =) */
+.bottom-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Changed from 3 to 4 columns */
+    gap: 10px;
+}
+
+/* Position the clear button in the first column */
+.clear-btn {
+    grid-column: 1 / 2;
+    background-color: #fca5a5;
+    color: #b91c1c;
+}
+
+.clear-btn:hover {
+    background-color: #f87171;
+}
+
+/* Position the zero button in the second column */
+.zero-btn {
+    grid-column: 2 / 3;
+}
+
+/* Position the decimal button in the third column */
+.decimal-btn {
+    grid-column: 3 / 4;
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.decimal-btn:hover:not(:disabled) {
+    background-color: #d1d5db;
+}
+
+/* Disabled state for decimal button */
+.decimal-btn:disabled {
+    background-color: #f9fafb;
+    color: #9ca3af;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Position the equals button in the fourth column */
+.equals-btn {
+    grid-column: 4 / 5; /* Changed from 3/4 to 4/5 */
+}
+
+/* Flex container for the operator buttons */
+.operator-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 25%;
+}
+
+/* General styling for all buttons */
+button {
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border: none;
+    background-color: #f3f4f6;
+    color: #374151;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #e5e7eb;
+}
+
+button:active {
+    background-color: #d1d5db;
+    transform: scale(0.98);
+}
+
+/* Specific styling for operator buttons */
+.operator-panel button {
+    background-color: #fb923c;
+    color: white;
+}
+
+.operator-panel button:hover {
+    background-color: #f97316;
+}
+
+.operator-panel button:active {
+    background-color: #ea580c;
+}
+
+/* Special styling for the equals button */
+.equals-btn {
+    background-color: #fb923c;
+    color: white;
+}
+
+.equals-btn:hover {
+    background-color: #f97316;
+}
+
+.equals-btn:active {
+    background-color: #ea580c;
+}
+
+/* Special styling for the backspace button */
+.backspace-btn {
+    background-color: #ef4444 !important;
+    color: white !important;
+    font-size: 1.4rem;
+}
+
+.backspace-btn:hover {
+    background-color: #dc2626 !important;
+}
+
+.backspace-btn:active {
+    background-color: #b91c1c !important;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+    .calculator {
+        width: 90%;
+        max-width: 380px;
+    }
+    
+    button {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+    
+    .display {
+        font-size: 2rem;
+        padding: 12px;
+    }
+}
