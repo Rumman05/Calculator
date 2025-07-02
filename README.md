@@ -1,4 +1,4 @@
-# Advanced Calculator
+# Calculator 
 
 A modern, responsive calculator built with vanilla HTML, CSS, and JavaScript. This isn't your basic calculator - it comes packed with features like decimal support, keyboard shortcuts, dark mode, and a clean, intuitive interface.
 
